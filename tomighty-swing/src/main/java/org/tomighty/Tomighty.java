@@ -99,7 +99,6 @@ public class Tomighty implements Runnable {
 				public void run() {
 					Class<? extends UiState> stateClass = message.getStateClass();
 					render(stateClass);
-					window.show(null);
 					bus.publish(new UiStateChanged(currentState));
 				}
 			});
